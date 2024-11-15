@@ -1,0 +1,1 @@
+from stocks_analyzer.stocks_analyzer.analyzer import Analyzer

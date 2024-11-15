@@ -1,0 +1,35 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flake8 = "*"
+flake8-builtins = "*"
+flake8-bugbear = "*"
+flake8-commas = "*"
+flake8-eradicate = "*"
+pep8-naming = "*"
+flake8-docstring-checker = "*"
+flake8-variables-names = "*"
+flake8-annotations = "*"
+flake8-nb = "*"
+flake8-import-order = "*"
+flake8-clean-block = "*"
+flake8-docstrings-complete = "*"
+yfinance = "*"
+jupyter = "*"
+numpy = "*"
+openpyxl = "*"
+xlsxwriter = "*"
+matplotlib = "*"
+scipy = "*"
+jupyterlab = "*"
+ipykernel = "*"
+pipfile = "*"
+pytrends = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
