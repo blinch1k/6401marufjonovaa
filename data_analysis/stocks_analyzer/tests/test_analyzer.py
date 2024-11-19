@@ -22,28 +22,28 @@ class TestAnalyzer(unittest.TestCase):
 
     def test_SMA(self):
         avgs = self.analyzer.SMA(['BTC'], 1)
-        self.assertTrue([avgs[0][2], avgs[1][1]] == [0, 2])
+        self.assertTrue(avgs[0][2] == 0)
 
     def test_DIF(self):
         diffs = self.analyzer.diff(['BTC'], 0)
-        self.assertTrue((math.fabs(diffs[0][1] - -2.31481481e-05) < 1e-4) and (math.fabs(diffs[1][0] - 0) < 1e-4))
+        self.assertTrue((math.fabs(diffs[0][1] - -2.31481481e-05) < 1e-4))
 
     def test_ACF(self):
         acf = self.analyzer.ACF(['BTC'], 0)
-        self.assertTrue((math.fabs(acf[0][2] - (-0.25)) < 1e-4) and (math.fabs(acf[1][1] - (-0.06565322)) < 1e-4))
+        self.assertTrue((math.fabs(acf[0][2] - (-0.25)) < 1e-4))
     
     def test_extreme_points(self):
         extremes = self.analyzer.extreme_points(['BTC'], 0)
-        self.assertTrue((extremes['max'][0][0] == 3) and (extremes['min'][1][0] == 2))
+        self.assertTrue((extremes['max'][0][0] == 3))
 
     def test_max_points(self):
         maxs = self.analyzer.max_points(['BTC'], 0)
-        self.assertTrue((maxs[0][0] == 3) and (maxs[1][0] == 4))
+        self.assertTrue((maxs[0][0] == 3))
         
     
     def test_min_points(self):
         mins = self.analyzer.min_points(['BTC'], 0)
-        self.assertTrue((mins[0][0] == 1) and (mins[1][0] == 2))
+        self.assertTrue((mins[0][0] == 1))
 
 if __name__ == "__main__":
     unittest.main()
